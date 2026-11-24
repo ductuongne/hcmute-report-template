@@ -6,6 +6,14 @@ Mẫu báo cáo `.docx` này được mình tinh chỉnh và hoàn thiện trong
 
 Mẫu có sẵn hệ thống style, đánh số tự động cho Chương, Mục, Hình, Bảng, Phụ lục và Mục lục tự cập nhật. Bạn chỉ cần điền nội dung, không phải định dạng lại từ đầu cho mỗi môn.
 
+## Ảnh minh họa
+
+Trang bìa của mẫu:
+
+<p align="center">
+  <img src="bia.png" alt="Trang bìa mẫu báo cáo" width="450">
+</p>
+
 ## Giới thiệu nhanh
 
 - Mẫu sử dụng khổ A4, Font Times New Roman 14pt, theo quy cách thường gặp ở các báo cáo môn học
@@ -20,6 +28,7 @@ Mẫu có sẵn hệ thống style, đánh số tự động cho Chương, Mục
 |------|-------|
 | `mau-bao-cao.docx` | File mẫu báo cáo |
 | `huong-dan-su-dung.docx` | Hướng dẫn áp dụng bộ style, cập nhật mục lục... |
+| `images/bia.png` | Ảnh minh họa trang bìa |
 
 ## Bắt đầu nhanh
 
@@ -34,19 +43,20 @@ Mẫu có sẵn hệ thống style, đánh số tự động cho Chương, Mục
 
 ## Bộ style chính
 
-| Style | Dùng cho |
-|-------|----------|
-| Tiêu đề bìa / Tiêu đề giữa | Tiêu đề trang bìa và các mục đầu bài (Lời cam kết, Mục lục...) |
-| Heading 1 | Cấp Phần lớn (Phần nội dung, Danh mục tài liệu tham khảo, Phụ lục), không đánh số |
-| Heading 2 | Tên Chương, tự sinh `CHƯƠNG X:` |
-| Heading 3 / 4 / 5 | Mục con, tự sinh `1.1.`, `1.1.1.`, `1.1.1.1.` |
-| Nội dung / Nội dung không thụt lề | Văn bản chính (thụt đầu dòng 1 cm) và đoạn dẫn nhập (không thụt) |
-| Nội dung bảng + Table Grid | Mọi ô dữ liệu trong bảng |
-| Hình ảnh / Tên hình ảnh | Ảnh (In Line with Text) và chú thích `Hình X.Y:` đặt dưới ảnh |
-| Tên bảng | Chú thích `Bảng X.Y:` đặt phía trên bảng |
-| Danh sách | Liệt kê gạch đầu dòng |
-| Code Block | Mã nguồn, đặt trong bảng 1 dòng 1 cột |
-| Phụ lục - Tiêu đề / Phụ lục - Mục | Tự sinh `PHỤ LỤC A.`, `A.1.`, sau đó `B`, `B.1`... |
+| # | Tên style trong Word | Định dạng & đánh số tự động | Phạm vi và quy tắc áp dụng |
+|---|----------------------|-----------------------------|----------------------------|
+| 1 | Tiêu đề bìa / Tiêu đề giữa | Tiêu đề bìa 16pt, Tiêu đề giữa 14pt; đậm, căn giữa. Tiêu đề bìa tự in HOA; Tiêu đề giữa phải gõ chữ HOA | Tiêu đề trên trang bìa và các mục đầu bài (MỤC LỤC, LỜI CAM KẾT...) |
+| 2 | Heading 1 (ilvl 0) | 14pt, đậm, căn giữa, ALL CAPS (không số) | Chỉ dùng cho cấp Phần lớn: PHẦN NỘI DUNG, DANH MỤC TÀI LIỆU THAM KHẢO, PHỤ LỤC |
+| 3 | Heading 2 (ilvl 1) | 14pt, đậm, căn giữa, tự sinh `CHƯƠNG X:` | Tên Chương (tự tăng số Chương và reset mục con, Bảng, Hình về `.1`) |
+| 4 | Heading 3, 4 (ilvl 2–3) | 14pt, căn trái. Heading 3: đậm; Heading 4: nghiêng (không đậm) | Tự sinh số mục `1.1.`, `1.1.1.` (số đầu theo Chương hiện tại, sang Chương 2 là `2.1.`); tự reset về `.1` khi sang mục cha mới |
+| 5 | Nội dung / Nội dung không thụt lề | 14pt, giãn dòng 1.5, Justified (thụt 1 cm / 0 cm) | Văn bản thuyết minh chính (thụt đầu dòng 1 cm) và đoạn dẫn nhập (0 cm) |
+| 6 | Nội dung bảng & Table Grid | 14pt, giãn dòng 1.0, căn giữa, không thụt lề | Mọi ô dữ liệu trong bảng (không dùng style Normal trong bảng). Bảng dài nên bật **Table Layout → Repeat Header Rows** để dòng tiêu đề lặp lại khi sang trang (các bảng trong mẫu đã bật sẵn) |
+| 7 | Hình ảnh & Tên hình ảnh | 14pt, căn giữa, ilvl 5 (`Hình X.Y:`) | Đoạn chứa ảnh gắn style *Hình ảnh* (In Line with Text); dòng dưới gắn *Tên hình ảnh* |
+| 8 | Tên bảng (ilvl 6) | 14pt, căn giữa, ilvl 6 (`Bảng X.Y:`) | Đặt ngay phía trên bảng dữ liệu; nhãn `Bảng X.Y:` tự in đậm đứng, tên nghiêng |
+| 9 | Danh sách (numId=2) | 14pt, giãn dòng 1.5, hanging indent, bullet `-` | Tất cả danh sách liệt kê gạch đầu dòng trong báo cáo |
+| 10 | Code Block (bảng 1x1) | Consolas 10pt, giãn dòng 1.0, Before/After = 0 | Đặt mã nguồn SQL/Code trong bảng 1 dòng 1 cột viền đơn, văn bản gắn *Code Block* |
+| 11 | Phụ lục - Tiêu đề & Phụ lục - Mục | 14pt, đậm, Outline Level 1 & Level 2 | Tên Phụ lục và mục con; chỉ gắn style, số `A, B, C...` và `A.1, A.2...` tự sinh (không gõ tay, không dùng `Ctrl + Q` xóa số); tự vào Mục lục chính |
+| 12 | Đánh số thứ tự | 14pt, đậm, ilvl 3 | Dùng cho phần mở đầu, đánh từ `1.`, `2.`... |
 
 Chi tiết từng style xem trong `huong-dan-su-dung.docx`.
 
@@ -65,7 +75,6 @@ Chi tiết từng style xem trong `huong-dan-su-dung.docx`.
 | Phông chữ | Times New Roman 14pt |
 | Giãn dòng | 1.5 cho nội dung, 1.0 cho bảng |
 | Đánh số trang | Trang bìa và phần đầu không đánh số, bắt đầu từ 1 tại Phần nội dung |
-
 
 ## Tác giả
 
